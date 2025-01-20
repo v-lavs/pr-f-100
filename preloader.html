@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Прелоадер "Фармак"</title>
+
+    <!--    закрити індексацію-->
+    <meta name="robots" content="noindex"/>
+
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анімація блоків</title>
+    <style>
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        #preloader.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.5s ease, visibility 0.5s ease;
+        }
+
+        .animation-container {
+            position: relative;
+            width: 114px;
+            height: 114px;
+            overflow: hidden;
+            margin-right: 57px;
+        }
+
+        .logo-preloader {
+            max-width: 276px;
+        }
+
+        .logo-preloader img {
+            width: 100%;
+            height: auto;
+        }
+
+        .block {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .block-1 {
+            top: 0;
+            left: 0;
+            animation-delay: 0s;
+            background-color: rgba(51, 175, 225, 1);
+            background-image: url('fill-square-icon.svg');
+            animation: move-1 1.7s infinite;
+        }
+
+        .block-2 {
+            top: 0;
+            left: 50%;
+            animation-delay: 0.425s;
+            background-color: rgba(102, 195, 232, 1);
+            background-image: url('fill-square-icon-1.svg');
+            animation: move-2 1.7s infinite;
+        }
+
+        .block-3 {
+            top: 50%;
+            left: 50%;
+            animation-delay: 0.85s;
+            background-color: rgba(153, 215, 240, 1);
+            background-image: url('fill-square-icon-2.svg');
+            animation: move-3 1.7s infinite;
+        }
+
+        .block-4 {
+            top: 50%;
+            left: 0;
+            animation-delay: 1.275s;
+            background-color: rgba(0, 155, 217, 1);
+            background-image: url('fill-square-icon3.svg');
+            animation: move-4 1.7s infinite;
+        }
+
+        @keyframes move-1 {
+            0% {
+                top: 0;
+                left: 0;
+            }
+            25% {
+                top: 0;
+                left: 50%;
+            }
+            50% {
+                top: 50%;
+                left: 50%;
+            }
+            75% {
+                top: 50%;
+                left: 0;
+            }
+            100% {
+                top: 0;
+                left: 0;
+            }
+        }
+
+        @keyframes move-2 {
+            0% {
+                top: 0;
+                left: 50%;
+            }
+            25% {
+                top: 50%;
+                left: 50%;
+            }
+            50% {
+                top: 50%;
+                left: 0;
+            }
+            75% {
+                top: 0;
+                left: 0;
+            }
+            100% {
+                top: 0;
+                left: 50%;
+            }
+        }
+
+        @keyframes move-3 {
+            0% {
+                top: 50%;
+                left: 50%;
+            }
+            25% {
+                top: 50%;
+                left: 0;
+            }
+            50% {
+                top: 0;
+                left: 0;
+            }
+            75% {
+                top: 0;
+                left: 50%;
+            }
+            100% {
+                top: 50%;
+                left: 50%;
+            }
+        }
+
+        @keyframes move-4 {
+            0% {
+                top: 50%;
+                left: 0;
+            }
+            25% {
+                top: 0;
+                left: 0;
+            }
+            50% {
+                top: 0;
+                left: 50%;
+            }
+            75% {
+                top: 50%;
+                left: 50%;
+            }
+            100% {
+                top: 50%;
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<div id="preloader">
+    <div class="animation-container">
+        <div class="block block-1"></div>
+        <div class="block block-2"></div>
+        <div class="block block-3"></div>
+        <div class="block block-4"></div>
+    </div>
+    <div class="logo-preloader">
+        <img src="preloader-logo.svg" alt="100 років якості 'Фармак'">
+    </div>
+</div>
+</body>
+</html>
+
+</body>
+</html>
