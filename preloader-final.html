@@ -37,7 +37,7 @@
     .animation-container {
         position: relative;
         width: 100%;
-        max-width: 608px; /* Розмір прелоадера */
+        max-width: 608px;
         height: 210px;
         display: flex;
         align-items: center;
@@ -48,23 +48,22 @@
         position: absolute;
         width: 100%;
         height: auto;
-        /*object-fit: cover;*/
         opacity: 0;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
-        /*animation-delay: 4s;*/
+        animation-delay: 4s;
     }
 
     .image-top {
 
         max-width: 608px;
-        animation: moveUp 4s infinite;
+        animation: moveUp 6s infinite;
     }
 
     .image-bottom {
 
         max-width: 412px;
-        animation: moveUpBottom 4s infinite;
+        animation: moveUpBottom 6s infinite;
     }
 
     @keyframes moveUp {
@@ -77,11 +76,12 @@
             opacity: 1;
         }
         50% {
-            transform: translateY(-120%);
+            transform: translateY(-100%);
             opacity: 0;
+
         }
         80% {
-            transform: translateY(120%);
+            transform: translateY(100%);
             opacity: 0;
         }
         100% {
@@ -92,7 +92,7 @@
 
     @keyframes moveUpBottom {
         0%, 30% {
-            transform: translateY(120%);
+            transform: translateY(100%);
             opacity: 0;
         }
         50% {
@@ -101,11 +101,11 @@
 
         }
         80%{
-            transform: translateY(-120%);
-            opacity: 0;
+            transform: translateY(0);
+            opacity: 1;
         }
         100% {
-            transform: translateY(0);
+            transform: translateY(-100%);
             opacity:0;
         }
     }
