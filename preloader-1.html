@@ -2,17 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Прелоадер "Фармак"</title>
-
-    <!--    закрити індексацію-->
-    <meta name="robots" content="noindex"/>
-
-</head>
-<body>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Анімація блоків</title>
     <style>
@@ -59,12 +48,14 @@
             width: 100%;
             height: auto;
         }
+
         .block {
             position: absolute;
             width: 50%;
             height: 50%;
             background-size: cover;
             background-position: center;
+            -webkit-animation-timing-function: linear;
             animation-timing-function: linear;
             will-change: transform;
         }
@@ -74,6 +65,7 @@
             left: 0;
             background-color: rgba(51, 175, 225, 1);
             background-image: url('fill-square-icon.svg');
+            -webkit-animation: move-1 1.7s infinite;
             animation: move-1 1.7s infinite;
         }
 
@@ -82,6 +74,7 @@
             left: 50%;
             background-color: rgba(102, 195, 232, 1);
             background-image: url('fill-square-icon-1.svg');
+            -webkit-animation: move-2 1.7s infinite;
             animation: move-2 1.7s infinite;
         }
 
@@ -90,6 +83,7 @@
             left: 50%;
             background-color: rgba(153, 215, 240, 1);
             background-image: url('fill-square-icon-2.svg');
+            -webkit-animation: move-3 1.7s infinite;
             animation: move-3 1.7s infinite;
 
         }
@@ -99,77 +93,190 @@
             left: 0;
             background-color: rgba(0, 155, 217, 1);
             background-image: url('fill-square-icon3.svg');
+            -webkit-animation: move-4 1.7s infinite;
             animation: move-4 1.7s infinite;
+        }
+
+        @-webkit-keyframes move-1 {
+            0% {
+                -webkit-transform: translate(0,0);
+                transform: translate(0,0);
+            }
+            25% {
+                -webkit-transform: translate(100%,0);
+                transform: translate(100%,0);
+            }
+            50% {
+                -webkit-transform: translate(100%,100%);
+                transform: translate(100%,100%);
+            }
+            75% {
+                -webkit-transform: translate(0,100%);
+                transform: translate(0,100%);
+            }
+            100% {
+                -webkit-transform: translate(0,0);
+                transform: translate(0,0);
+            }
         }
 
         @keyframes move-1 {
             0% {
+                -webkit-transform: translate(0,0);
                 transform: translate(0,0);
             }
             25% {
+                -webkit-transform: translate(100%,0);
                 transform: translate(100%,0);
             }
             50% {
+                -webkit-transform: translate(100%,100%);
                 transform: translate(100%,100%);
             }
             75% {
+                -webkit-transform: translate(0,100%);
                 transform: translate(0,100%);
             }
             100% {
+                -webkit-transform: translate(0,0);
+                transform: translate(0,0);
+            }
+        }
+
+        @-webkit-keyframes move-2 {
+            0% {
+                -webkit-transform: translate(0,0);
+                transform: translate(0,0);
+            }
+            25% {
+                -webkit-transform: translate(0, 100%);
+                transform: translate(0, 100%);
+            }
+            50% {
+                -webkit-transform: translate(-100%, 100%);
+                transform: translate(-100%, 100%);
+            }
+            75% {
+                -webkit-transform: translate(-100%, 0);
+                transform: translate(-100%, 0);
+            }
+            100% {
+                -webkit-transform: translate(0,0);
                 transform: translate(0,0);
             }
         }
 
         @keyframes move-2 {
             0% {
+                -webkit-transform: translate(0,0);
                 transform: translate(0,0);
             }
             25% {
+                -webkit-transform: translate(0, 100%);
                 transform: translate(0, 100%);
             }
             50% {
+                -webkit-transform: translate(-100%, 100%);
                 transform: translate(-100%, 100%);
             }
             75% {
+                -webkit-transform: translate(-100%, 0);
                 transform: translate(-100%, 0);
             }
             100% {
+                -webkit-transform: translate(0,0);
+                transform: translate(0,0);
+            }
+        }
+
+        @-webkit-keyframes move-3 {
+            0% {
+                -webkit-transform: translate(0,0);
+                transform: translate(0,0);
+            }
+            25% {
+                -webkit-transform: translate(-100%,0);
+                transform: translate(-100%,0);
+            }
+            50% {
+                -webkit-transform: translate(-100%, -100%);
+                transform: translate(-100%, -100%);
+            }
+            75% {
+                -webkit-transform: translate(0, -100%);
+                transform: translate(0, -100%);
+            }
+            100% {
+                -webkit-transform: translate(0,0);
                 transform: translate(0,0);
             }
         }
 
         @keyframes move-3 {
             0% {
+                -webkit-transform: translate(0,0);
                 transform: translate(0,0);
             }
             25% {
+                -webkit-transform: translate(-100%,0);
                 transform: translate(-100%,0);
             }
             50% {
+                -webkit-transform: translate(-100%, -100%);
                 transform: translate(-100%, -100%);
             }
             75% {
+                -webkit-transform: translate(0, -100%);
                 transform: translate(0, -100%);
             }
             100% {
+                -webkit-transform: translate(0,0);
                 transform: translate(0,0);
+            }
+        }
+
+        @-webkit-keyframes move-4 {
+            0% {
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+            }
+            25% {
+                -webkit-transform: translate(0, -100%);
+                transform: translate(0, -100%);
+            }
+            50% {
+                -webkit-transform: translate(100%, -100%);
+                transform: translate(100%, -100%);
+            }
+            75% {
+                -webkit-transform: translate(100%, 0%);
+                transform: translate(100%, 0%);
+            }
+            100% {
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
             }
         }
 
         @keyframes move-4 {
             0% {
+                -webkit-transform: translate(0, 0);
                 transform: translate(0, 0);
             }
             25% {
+                -webkit-transform: translate(0, -100%);
                 transform: translate(0, -100%);
             }
             50% {
+                -webkit-transform: translate(100%, -100%);
                 transform: translate(100%, -100%);
             }
             75% {
+                -webkit-transform: translate(100%, 0%);
                 transform: translate(100%, 0%);
             }
             100% {
+                -webkit-transform: translate(0, 0);
                 transform: translate(0, 0);
             }
         }
@@ -209,8 +316,5 @@
         <img src="preloader-logo.svg" alt="100 років якості 'Фармак'">
     </div>
 </div>
-</body>
-</html>
-
 </body>
 </html>

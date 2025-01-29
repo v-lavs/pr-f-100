@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Анімація прелоадер фінал</title>
+</head>
+<body>
+<style>
+    #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #ffffff;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        z-index: 9999;
+    }
+
+    #preloader.hidden {
+        opacity: 0;
+        visibility: hidden;
+        -webkit-transition: opacity 0.5s ease, visibility 0.5s ease;
+        -o-transition: opacity 0.5s ease, visibility 0.5s ease;
+        transition: opacity 0.5s ease, visibility 0.5s ease;
+    }
+
+    .animation-container {
+        position: relative;
+        width: 100%;
+        max-width: 608px; /* Розмір прелоадера */
+        height: 210px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        /*object-fit: cover;*/
+        opacity: 0;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        /*animation-delay: 4s;*/
+    }
+
+    .image-top {
+
+        max-width: 608px;
+        animation: moveUp 4s infinite;
+    }
+
+    .image-bottom {
+
+        max-width: 412px;
+        animation: moveUpBottom 4s infinite;
+    }
+
+    @keyframes moveUp {
+        0% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        30% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        50% {
+            transform: translateY(-120%);
+            opacity: 0;
+        }
+        80% {
+            transform: translateY(120%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes moveUpBottom {
+        0%, 30% {
+            transform: translateY(120%);
+            opacity: 0;
+        }
+        50% {
+            transform: translateY(0);
+            opacity: 1;
+
+        }
+        80%{
+            transform: translateY(-120%);
+            opacity: 0;
+        }
+        100% {
+            transform: translateY(0);
+            opacity:0;
+        }
+    }
+
+    /*.image {*/
+    /*    position: absolute;*/
+    /*    width: 100%;*/
+    /*    height: auto;*/
+    /*    !*width: 100%;*!*/
+    /*    !*height: 100%;*!*/
+    /*    !*object-fit: cover;*!*/
+    /*    animation-timing-function: ease-in-out;*/
+    /*    animation-iteration-count: infinite;*/
+    /*}*/
+
+    /*.image-top {*/
+    /*    max-width: 608px;*/
+    /*    animation: moveUpDown 6s infinite;*/
+    /*    !*animation: fadeMoveUp 4s infinite;*!*/
+    /*}*/
+
+    /*.image-bottom {*/
+    /*    max-width: 412px;*/
+    /*    !*animation: fadeMoveDown 4s infinite;*!*/
+    /*    animation: moveDownUp 6s infinite;*/
+    /*}*/
+
+    /*@keyframes moveUpDown {*/
+    /*    0%, 30% {*/
+    /*        transform: translateY(0);*/
+    /*        opacity: 1;*/
+    /*    }*/
+    /*    50% {*/
+    /*        transform: translateY(-100%);*/
+    /*        opacity: 0;*/
+    /*    }*/
+    /*    80%, 100% {*/
+    /*        transform: translateY(0);*/
+    /*        opacity: 1;*/
+    /*    }*/
+    /*}*/
+
+
+    /*@keyframes moveDownUp {*/
+    /*    0%, 30% {*/
+    /*        transform: translateY(100%);*/
+    /*        opacity: 0;*/
+    /*    }*/
+    /*    50% {*/
+    /*        transform: translateY(0);*/
+    /*        opacity: 1;*/
+    /*    }*/
+    /*    80%, 100% {*/
+    /*        transform: translateY(100%);*/
+    /*        opacity: 0;*/
+    /*    }*/
+    /*}*/
+
+
+</style>
+<div id="preloader">
+    <div class="animation-container">
+        <!--        <div class="image image-top" style="height: 100%; background-color: red;"></div>-->
+        <!--        <div class="image image-bottom" style="height: 100%; background-color: greenyellow;"></div>-->
+        <img src="assets/img/logo-text_uk.svg" alt="100 років якості" class="image image-top">
+        <img src="assets/img/logo-farmak.svg" alt="Logo Farmak" class="image image-bottom">
+    </div>
+</div>
+</body>
+</html>
