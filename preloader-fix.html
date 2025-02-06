@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Анімація прелоадер Правка</title>
+    <title>Анімація прелоадер фінал</title>
 </head>
 <body>
 <style>
@@ -52,16 +52,19 @@
         opacity: 0;
         animation-timing-function: ease-in-out;
         animation-iteration-count: infinite;
-        animation-delay: 1s;
-        max-width: 608px;
+        animation-delay: 1.5s;
     }
 
     .image-top {
-        animation: moveUp 2s infinite;
+        width: 100%;
+        max-width: 608px;
+        animation: moveUp 3s infinite;
     }
 
     .image-bottom {
-        animation: moveUpBottom 2s infinite;
+        width: 68%;
+        max-width: 412px;
+        animation: moveUpBottom 3s infinite;
     }
 
     @keyframes moveUp {
@@ -112,7 +115,7 @@
 <div id="preloader">
     <div class="animation-container">
         <img src="assets/img/logo-text_uk.svg" alt="100 років якості" class="image image-top">
-        <img src="assets/img/logo-text_uk.svg" alt="100 років якості" class="image image-bottom">
+        <img src="assets/img/logo-farmak.svg" alt="Farmak" class="image image-bottom">
     </div>
 </div>
 </body>
